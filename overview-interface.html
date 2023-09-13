@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Scenthisiser</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/akj6gkh.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rwf0vvt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js" integrity="sha512-zuZ5wVszlsRbRF/vwXD0QS/tHzBYHFzCD/BT0lI3yrWhNZFWDkkF3KPEY//WTanqxwPdZkskQ+xZo0rnfHBc5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col">
+          </div>
+          <div class="col text-center py-2">
+            <img src="img/nozieLogo.png" width="150" />
+          </div>
+          <div class="col text-end">
+            <div class="d-inline">
+              <a href=""><img class="me-3" src="img/profile.png" width="20" /></a>
+              <a href=""><img src="img/basket.png" width="20" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="secondNav" class="bg-dark pt-2">
+      <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-3">
+          <div class="d-inline-block">
+            <a class="px-2 px-md-4" href=""><span class="material-icons-outlined">share</span></a>
+            <a class="px-2 px-md-4" href=""><span class="material-icons-outlined">favorite_border</span></a>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="d-inline-block">
+            <a class="px-2 px-md-4 active" href=""><span class="material-icons-outlined">opacity</span></a>
+            <a class="px-2 px-md-4" href=""><span class="material-icons-outlined">pie_chart_outline</span></a>
+            <a class="px-2 px-md-4" href=""><span class="material-icons-outlined">colorize</span></a>
+            <a class="px-2 px-md-4" href=""><span class="material-icons-outlined">help_outline</span></a>
+            <a class="px-2 px-md-4" href=""><span class="material-icons-outlined">fmd_bad</span></a>
+          </div>
+        </div>
+        <div class="col-3 text-end">
+          <div class="d-inline">
+            <div class="price pb-2">
+              <span id="totalPrice">£20</span> <span>50ml</span>
+            </div>
+          </div>
+        </div>
+        <div>
+        </div>
+      </div>
+    </header>
+    <div id="animatedGradient">
+      <div id="bubbleWrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+      </div>
+      <div class="aboveDroplets position-relative">
+        <div class="container">
+          <div id="nameScent" class="row py-3 sticky-top">
+            <div class="col-12 text-center">
+              <h3 class="mb-0">Give your perfume a name</h3>
+              <input type="text" id="perfumeName" name="perfumeName" placeholder="Type name here+" />
+              <img id="bottleIt" src="img/bottleIt.png" />
+            </div>
+          </div>
+          <div id="topMiddleBaseVisualiser">
+            <div class="top">
+              <div class="visualiserTitle">
+                <div class="align-items-center row">
+                  <div class="col-3 col-md-1">TOP</div>
+                  <div class="col-6 col-md-10">
+                    <hr/>
+                  </div>
+                  <div id="topPercentage" class="col-3 col-md-1 text-end">100%</div>
+                </div>
+              </div>
+              <div id="topBlendContainer" class="text-center justify-content-around align-items-center row">
+              </div>
+            </div>
+            <div class="middle">
+              <div class="visualiserTitle">
+                <div class="align-items-center row">
+                  <div class="col-3 col-md-1">MIDDLE</div>
+                  <div class="col-6 col-md-10">
+                    <hr/>
+                  </div>
+                  <div id="middlePercentage"  class="col-3 col-md-1 text-end">100%</div>
+                </div>
+              </div>
+              <div id="middleBlendContainer" class="text-center justify-content-around align-items-center row">
+              </div>
+            </div>
+            <div class="base">
+              <div class="visualiserTitle">
+                <div class="align-items-center row">
+                  <div class="col-3 col-md-1">BASE</div>
+                  <div class="col-6 col-md-10">
+                    <hr/>
+                  </div>
+                  <div id="basePercentage" class="col-3 col-md-1 text-end">100%</div>
+                </div>
+              </div>
+              <div id="baseBlendContainer" class="text-center justify-content-around align-items-center row">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fixed-bottom remove-z-index bottomGradient">
+          <div id="blendList" class="mt-5">
+            <div class="container-fluid">
+              <div class="row py-3">
+                <div class="col-12 p-0">
+                  <div class="center" id="center">
+                    <div class="item">
+                      <div class="blendButton text-center">
+                        <h2>Base</h2>
+                        <div onClick="showHidePercentageToggler(0)" class="blendTab d-flex align-items-center">
+                          <div style="background: url('img/blendImage.png');" class="blendImage me-2"></div>
+                          <div class="blendInfo">
+                            <div class="blendPercentage">80%</div>
+                            <div class="blendTitle">Portofino</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="blendButton text-center">
+                        <h2>Accent 1</h2>
+                        <div onClick="showHidePercentageToggler(1)" class="blendTab d-flex align-items-center">
+                          <div style="background: url('img/blendImage.png');" class="blendImage me-2"></div>
+                          <div class="blendInfo">
+                            <div class="blendPercentage">80%</div>
+                            <div class="blendTitle">Portofino</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="addRemoveRestart" class="pb-3">
+            <div class="container">
+              <div class="row align-items-center justify-content-center text-center">
+                <div class="col col-md-3">
+                  Add Blend +
+                </div>
+                <div class="col col-md-3">
+                  Remove Blend -
+                </div>
+                <div class="col col-md-3">
+                  Start Over
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Can probably set state here to display correct pop up-->
+        <div id="percentageToggler" class="d-none">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div id="rangeContainer">
+                  <div id="ranges">
+                    <div id="rangeBlendId0" class="d-none">
+                      <div class="range-slider rotation-wrapper-outer">
+                        <div class="text-center">
+                          <div class="fragranceName">Aventus</div>
+                          <label id="input0label">
+                          <span>0</span>%
+                          </label>
+                          <div class="fragranceName">CONCENTRATION</div>
+                        </div>
+                        <div class="rotation-wrapper-inner">
+                          <input onChange="calculatePerc()" type="range" class="slido range" max="100" value="100" id="input0">
+                        </div>
+                        <div class="text-center mt-4">
+                          <div class="text-white">Accent 1</div>
+                          <div onClick="savePercentageChange()" class="updateFragrance">Set Concentration</div>
+                          <div onClick="cancelPercentageChange()" class="text-white">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="rangeBlendId1" class="d-none">
+                      <div class="range-slider rotation-wrapper-outer">
+                        <div class="text-center">
+                          <div class="fragranceName">Aventus 2</div>
+                          <label id="input1label">
+                          <span>0</span>%
+                          </label>
+                          <div class="fragranceName">CONCENTRATION</div>
+                        </div>
+                        <div class="rotation-wrapper-inner">
+                          <input onChange="calculatePerc()" type="range" class="slido range" max="100" value="100" id="input1">
+                        </div>
+                        <div class="text-center mt-4">
+                          <div class="text-white">Accent 2</div>
+                          <div onClick="savePercentageChange()" class="updateFragrance">Blend My Perfume</div>
+                          <div onClick="cancelPercentageChange()" class="text-white">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Start with Mercural Cashmire as an example of first selected scent
+ 
+      let scents = {
+
+        0: {
+          "scentName": "Mercural Cashmire",
+          "pricePerUnit": "0.50",
+          "fragrances": {
+            0: { 
+              "name": "Floral",
+              "color": "#fabbda",
+              "image": "img/orange_1.png",
+              "children": {
+                "light": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "powdery": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "fruity": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                "rosy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "narcotic": {
+                  "top": 25,
+                  "middle": 25,
+                  "base": 0,
+                  "total": 50
+                }
+              }
+            },  
+            1: { 
+              "name": "Spicy",
+              "color": "#ee817c", 
+              "children": {
+                "sweet": {
+                  "top": 3,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 3
+                }, 
+                "sharp": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "heavy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                "fresh": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            }, 
+            2: {
+              "name": "Resinous",
+              "color": "#eb3e7d",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "amber": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "light": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              } 
+            },
+            3: { 
+              "name": "Woody",
+              "color": "#fdc58c",
+              "image": "img/orange_1.png",
+              "children": {
+                "rich": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "soft": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 1,
+                  "total": 1
+                }
+              }
+            },
+            4: { 
+              "name": "Citrus",
+              "color": "#fbe68b",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 5,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 5
+                }, 
+                "fresh": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            },  
+            5: { 
+              "name": "Fresh",
+              "color": "#74bfb8",
+              "image": "img/orange_1.png",
+              "children": {
+                "aldehydes": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "aquatic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "menthol": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              } 
+            }, 
+            6: { 
+              "name": "Green",
+              "color": "#23b574",
+              "image": "img/orange_1.png",
+              "children": {
+                "aromatic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "bitterDarkSharp": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                } 
+              }
+            },   
+            7: { 
+              "name": "Agrestic / Wild / Rural",
+              "color": "#b0ebb5",
+              "image": "img/orange_1.png",
+              "children": {
+                "green": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "earthy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "warm": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            }, 
+            8: { 
+              "name": "Animalic",
+              "color": "#9cd9eb",
+              "image": "img/orange_1.png",
+              "children": {
+                "musky": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 16,
+                  "total": 16
+                }, 
+                "rich": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0
+                }, 
+                "leather": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            },  
+            9: { 
+              "name": "Abstract",
+              "color": "#5481c2",
+              "image": "img/orange_1.png",
+              "children": {
+                "divisive": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "nostalgicBranded": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                } 
+              }
+            },  
+            10: { 
+              "name": "Gourmand",
+              "color": "#bb93c5",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 25,
+                  "total": 25
+                }, 
+                "rich": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "milky": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "alcoholNarcotic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            },  
+            11: { 
+              "name": "Fruity",
+              "color": "#b586b2",
+              "image": "img/orange_1.png",
+              "children": {
+                "tropical": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "juicy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "sharp": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                } 
+              }
+            }
+
+          }
+        },
+        1: {
+          "scentName": "Another Cashmire",
+          "pricePerUnit": "0.20",
+          "fragrances": {
+            0: { 
+              "name": "Floral",
+              "color": "#fabbda",
+              "image": "img/orange_1.png",
+              "children": {
+                "light": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "powdery": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "fruity": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                "rosy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "narcotic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+        
+              }
+            },  
+            1: { 
+              "name": "Spicy",
+              "color": "#ee817c",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "sharp": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "heavy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                "fresh": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                },  
+                
+        
+              }
+            }, 
+            2: {
+              "name": "Resinous",
+              "color": "#eb3e7d",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "amber": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "light": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              } 
+            },
+            3: { 
+              "name": "Woody",
+              "color": "#fdc58c",
+              "image": "img/orange_1.png",
+              "children": {
+                "rich": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 5,
+                  "total": 5
+                }, 
+                "soft": {
+                  "top": 12,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 12
+                }
+              }
+            },
+            4: { 
+              "name": "Citrus",
+              "color": "#fbe68b",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 20,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 20
+                }, 
+                "fresh": {
+                  "top": 30,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 30
+                }
+              }
+            },  
+            5: { 
+              "name": "Fresh",
+              "color": "#74bfb8",
+              "image": "img/orange_1.png",
+              "children": {
+                "aldehydes": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "aquatic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "menthol": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              } 
+            }, 
+            6: { 
+              "name": "Green",
+              "color": "#23b574",
+              "image": "img/orange_1.png",
+              "children": {
+                "aromatic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "bitterDarkSharp": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                } 
+              }
+            },   
+            7: { 
+              "name": "Agrestic / Wild / Rural",
+              "color": "#b0ebb5",
+              "image": "img/orange_1.png",
+              "children": {
+                "green": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "earthy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 8,
+                  "total": 8
+                }, 
+                "warm": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            }, 
+            8: { 
+              "name": "Animalic",
+              "color": "#9cd9eb",
+              "image": "img/orange_1.png",
+              "children": {
+                "musky": {
+                  "top": 0,
+                  "middle": 5,
+                  "base": 10,
+                  "total": 15
+                }, 
+                "rich": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0
+                }, 
+                "leather": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            },  
+            9: { 
+              "name": "Abstract",
+              "color": "#5481c2",
+              "image": "img/orange_1.png",
+              "children": {
+                "divisive": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "nostalgicBranded": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                } 
+              }
+            },  
+            10: { 
+              "name": "Gourmand",
+              "color": "#bb93c5",
+              "image": "img/orange_1.png",
+              "children": {
+                "sweet": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "rich": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "milky": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "alcoholNarcotic": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }
+              }
+            },  
+            11: { 
+              "name": "Fruity",
+              "color": "#b586b2",
+              "image": "img/orange_1.png",
+              "children": {
+                "tropical": {
+                  "top": 5,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 5
+                }, 
+                "juicy": {
+                  "top": 0,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 0
+                }, 
+                "sharp": {
+                  "top": 5,
+                  "middle": 0,
+                  "base": 0,
+                  "total": 5
+                } 
+              }
+            }
+          }
+          
+      
+        }
+
+      }
+      
+      let userScent = {};
+      let topMiddleBase = {};
+      let colorPallete = [];
+      /* Array id and percentage */
+      let selectedScents = [[0, 40], [1, 60]];
+      
+      /* SET INITIAL VALUES FOR RANGE FIELDS */
+      selectedScents.forEach(function (index) {
+        document.getElementById('input'+index[0]).value = index[1];
+      });
+      
+      
+      createNewScent(scents, selectedScents);
+      calculatePrice(scents, selectedScents);
+      calculateSelectedPerfumeTotal(userScent);
+      calculatePerc(); 
+      
+      console.log(userScent);
+      console.log(topMiddleBase);
+      console.log(colorPallete);
+      
+      
+      
+      /* Get array of available scents and compare to selected scents */
+      function createNewScent(scents, selectedScents) {
+        
+        let newScent = {}; 
+        let percentage; 
+        
+        selectedScents.forEach(function (index) {
+          
+          /* Convert percentage to decimal */
+          percentage = index[1]/100;
+          const selectedScent = scents[index[0]];
+          /* Divide all values in original scent by selected percentage value */
+          const percentageOfScent = _.cloneDeepWith(selectedScent, x => typeof x === 'number'? x * percentage: undefined)
+          /* Create custom scent */
+          newScent = _.mergeWith(newScent, percentageOfScent, (a, b) => {
+            if(_.every([a, b], _.isNumber)) return a + b; 
+          });
+          
+        }); 
+       
+        userScent = newScent['fragrances']; 
+        
+      } 
+
+      function calculatePrice(scents, selectedScents) {
+        let pricePerHundredMl = 0.00;
+        selectedScents.forEach(function (index) {
+          let pricePerUnit = scents[index[0]]['pricePerUnit'];
+          let percentage = selectedScents[index[0]][1];
+          
+          pricePerHundredMl = (pricePerUnit * percentage) + pricePerHundredMl; 
+
+        });
+        /* work out 50 mil */ 
+        let totalPrice = (pricePerHundredMl / 2);
+        document.getElementById('totalPrice').innerHTML = '£' + Math.round(totalPrice);
+      }
+      
+      /* Return top, middle and base scents and find used colors for gradient */
+      function calculateSelectedPerfumeTotal(scent) {
+        console.log(scent);
+        let topCount = 0;
+        let middleCount = 0;
+        let baseCount = 0; 
+      
+        let top = {};
+        let middle = {};
+        let base = {}; 
+        colorPallete = [];
+        
+        Object.keys(scent).forEach(function(index) {
+
+          var children = scent[index]['children'];
+          let childTopCount = 0;
+          let childMiddleCount = 0;
+          let childBaseCount = 0;
+          Object.keys(children).forEach(function(childIndex) {
+            
+      
+            if (children[childIndex]['top'] != 0) {
+              topCount = topCount + children[childIndex]['top'];
+              childTopCount = childTopCount + children[childIndex]['top'];
+            }
+      
+            
+            if (children[childIndex]['middle'] != 0) {
+              middleCount = middleCount + children[childIndex]['middle'];
+              childMiddleCount = childMiddleCount + children[childIndex]['middle'];
+            }
+      
+            if (children[childIndex]['base'] != 0) { 
+              baseCount = baseCount + children[childIndex]['base'];
+              childBaseCount = childBaseCount + children[childIndex]['base'];
+            }
+      
+          });
+          
+          if (childTopCount > 0 ) {
+            top[index] = {'name': scent[index].name, 'image': scent[index].image, 'total': childTopCount, 'color': scent[index].color};
+            colorPallete.push(scent[index].color);
+          }
+          if (childMiddleCount > 0 ) {
+            middle[index] = {'name': scent[index].name, 'image': scent[index].image, 'total': childMiddleCount, 'color': scent[index].color};
+            colorPallete.push(scent[index].color);
+          }
+          if (childBaseCount > 0 ) {
+            base[index] = {'name': scent[index].name, 'image': scent[index].image, 'total': childBaseCount, 'color': scent[index].color};
+            colorPallete.push(scent[index].color);
+          }
+           
+      
+        });
+      
+      
+        let calculatedTopMiddleBase = {
+          'top': {
+            'scents': top,
+            'total': topCount
+          },
+          'middle': {
+            'scents': middle,
+            'total': middleCount
+          },
+          'base': {
+            'scents': base,
+            'total': baseCount
+          }
+        } 
+      
+      
+        topMiddleBase = calculatedTopMiddleBase;
+      
+      
+        /* TO BE REMOVED IN REACT - USE STATE TO LOOP THROUGH COLOR ARRAY ON DIV INSTEAD */ 
+        let colorString = '';
+        for (const color of colorPallete){
+          colorString += color+',';
+        }
+        colorString = colorString.slice(0, -1); 
+      
+        document.getElementById('animatedGradient').style.backgroundImage = 'linear-gradient(-45deg, '+colorString+')';
+
+        document.getElementById('percentageToggler').style.backgroundImage = 'linear-gradient(-45deg, '+colorString+')';
+         
+        /* NOT NEEDED IN REACT - JUST LOOP ITEMS */
+        populateTables(topMiddleBase);
+      
+      
+      
+      }
+      
+      /* Populate tables with images - This can be removed in react and just loop through the state within top, muddle and base divs */
+      function populateTables(topMiddleBase) {
+      
+        Object.keys(topMiddleBase).forEach(function(index) {
+          
+          if (index == 'top') {
+            
+            let topScents = topMiddleBase[index].scents;
+            let topScentContainer = document.getElementById('topBlendContainer');
+            topScentContainer.innerHTML ='';
+            Object.keys(topScents).forEach(function(i) {
+      
+              const div = document.createElement('div');
+              div.classList.add('col-6');
+              div.classList.add('col-md-4'); 
+      
+              if (topScents[i].total < 5) {
+                div.innerHTML = '<div class="scentTitleBubble">'+ topScents[i].total.toFixed(2) + '% '  + topScents[i].name+'</div>'; 
+              } else {
+                div.innerHTML = '<img style="width:'+topScents[i].total+'vw'+'" src="'+topScents[i].image+'" />'; 
+              }  
+      
+              topScentContainer.appendChild(div);
+      
+            }); 
+            
+            /* ADD TOTAL TO DIV - CAN BE DONE WITH STATE IN REACT */
+            document.getElementById('topPercentage').innerHTML = topMiddleBase[index].total.toFixed(2) + '%';
+            
+      
+          } else if (index == 'middle') {
+      
+            let middleScents = topMiddleBase[index].scents;
+            let middleScentContainer = document.getElementById('middleBlendContainer');
+            middleScentContainer.innerHTML ='';
+            Object.keys(middleScents).forEach(function(i) {
+      
+              const div = document.createElement('div');
+              div.classList.add('col-6');
+              div.classList.add('col-md-4'); 
+      
+              if (middleScents[i].total < 5) {
+                div.innerHTML = '<div class="scentTitleBubble">'+ middleScents[i].total.toFixed(2) + '% '  + middleScents[i].name+'</div>'; 
+              } else {
+                div.innerHTML = '<img style="width:'+middleScents[i].total+'vw'+'" src="'+middleScents[i].image+'" />'; 
+              } 
+      
+              middleScentContainer.appendChild(div);
+      
+            });
+      
+            /* ADD TOTAL TO DIV - CAN BE DONE WITH STATE IN REACT */
+            document.getElementById('middlePercentage').innerHTML = topMiddleBase[index].total.toFixed(2) + '%';
+      
+          } else if (index == 'base') {
+      
+            let baseScents = topMiddleBase[index].scents;
+            let baseScentContainer = document.getElementById('baseBlendContainer');
+            baseScentContainer.innerHTML ='';
+            Object.keys(baseScents).forEach(function(i) {
+      
+              const div = document.createElement('div');
+              div.classList.add('col-6');
+              div.classList.add('col-md-4');
+      
+              if (baseScents[i].total < 5) {
+                div.innerHTML = '<div class="scentTitleBubble">'+ baseScents[i].total.toFixed(2) + '% '  + baseScents[i].name+'</div>'; 
+              } else {
+                div.innerHTML = '<img style="width:'+baseScents[i].total+'vw'+'" src="'+baseScents[i].image+'" />'; 
+              }   
+      
+              baseScentContainer.appendChild(div);
+      
+            });
+      
+            document.getElementById('basePercentage').innerHTML = topMiddleBase[index].total.toFixed(2) + '%';
+      
+          }
+          
+      
+        });
+      
+      }
+      
+      
+      
+      function calculatePerc() {
+        // calc total
+        var total = 0;
+        var count = document.querySelectorAll('.range').length;
+      
+        selectedScents.forEach(function (index) {
+          total += parseInt(document.getElementById('input'+index[0]).value) || 0
+          
+        });
+      
+      
+      
+        selectedScents.forEach(function (index) {
+          var current = parseInt(document.getElementById('input'+index[0]).value) || 0;
+          var porc = (current * 100) / total || 0;
+          document.getElementById('input'+index[0]+'label').getElementsByTagName('span')[0].innerHTML = porc.toFixed(2);
+      
+        });
+      
+      
+      }
+      
+      function savePercentageChange() {
+      
+        // calc total
+        var total = 0;
+        var count = document.querySelectorAll('.range').length;
+      
+        selectedScents.forEach(function (index) {
+          total += parseInt(document.getElementById('input'+index[0]).value) || 0
+          
+        });
+      
+      
+      
+        selectedScents.forEach(function (index) {
+          var current = parseInt(document.getElementById('input'+index[0]).value) || 0;
+          var porc = (current * 100) / total || 0;
+          document.getElementById('input'+index[0]+'label').getElementsByTagName('span')[0].innerHTML = porc.toFixed(2);
+      
+          /* UPDATE PERCENTAGE IN selectedScents ARRAY */
+          index[1] = porc.toFixed(2);
+      
+      
+        });
+      
+      
+      
+        createNewScent(scents, selectedScents);
+        calculatePrice(scents, selectedScents);
+        calculateSelectedPerfumeTotal(userScent);
+        showHidePercentageToggler();
+      
+      
+      }
+      
+      
+      function cancelPercentageChange() {
+        
+        console.log(selectedScents);
+        var total = 0;
+        selectedScents.forEach(function (index) {
+          total += parseInt(index[1])
+          
+        });
+      
+        selectedScents.forEach(function (index) {
+      
+      
+          var current = parseInt(index[1]); 
+          var porc = (current * 100) / total || 0;
+          document.getElementById('input'+index[0]+'label').getElementsByTagName('span')[0].innerHTML = porc.toFixed(2);
+          document.getElementById('input'+index[0]).value = porc.toFixed(2);
+        });
+      
+        showHidePercentageToggler();
+      
+      }
+      
+      function showHidePercentageToggler(blendId=false) {
+        console.log(blendId);
+        document.getElementById('percentageToggler').classList.toggle("d-none");
+        if (blendId || blendId === 0) {
+      
+          document.getElementById('rangeBlendId'+blendId).classList.remove("d-none"); 
+           
+        } else {
+          selectedScents.forEach(function (index) {
+            document.getElementById('rangeBlendId'+index[0]).classList.add("d-none");
+          });
+        }
+      
+        window.scrollTo({ top: 0 });
+      }
+      
+      
+      /*
+      document.getElementById('animatedGradient').addEventListener('click', (e) => {
+      
+        const ripple = document.createElement('div');
+        ripple.classList.add('point');
+        var xOffset=Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+        var yOffset=Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+        ripple.style.top = e.clientY+yOffset-100 + 'px';
+        ripple.style.left = e.clientX+xOffset + 'px';
+        document.getElementById('animatedGradient').appendChild(ripple);
+      
+        for (i = 1; i < 7; i++) {
+          const aRipple = document.createElement('div');
+          aRipple.classList.add('circle-' + i);
+          ripple.appendChild(aRipple);
+        }
+      
+        setTimeout(() => {
+          ripple.remove();
+        }, 4000);
+        
+      }); */
+      
+      
+      
+      /* TINY SLIDER JS INIT - THERE IS A REACT PACKAGE FOR THIS ONE */
+      
+      
+      const slider = tns({
+      
+          container: '.center',
+          items: 1,
+          center: true, 
+          fixedWidth: 300,
+          loop: false,
+          slideBy: 1, 
+          mouseDrag: true,
+          controls: false,
+          nav: false,
+          responsive: {
+            375: { 
+              items: 2,
+              fixedWidth: 180
+            },
+            900: { 
+              items: 1,
+              fixedWidth: 300
+            } 
+          }
+      
+      
+      
+      });
+
+      var disableClicks = function (e) {
+        // direct access to info object
+   
+        var slides = document.getElementsByClassName('item');
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.pointerEvents = 'none';
+        }
+      }
+
+      var enableClicks = function (e) {
+        // direct access to info object
+ 
+        var slides = document.getElementsByClassName('item');
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.pointerEvents = 'auto';
+        }
+      }
+
+      slider.events.on('dragMove', disableClicks);
+      slider.events.on('dragEnd', enableClicks);
+
+
+      $('document').ready(function(){
+        $('#animatedGradient').ripples({
+          resolution: 512,
+          dropRadius: 20,
+          perturbance: 0.04,
+        });
+
+ 
+        $('#percentageToggler').ripples({
+          resolution: 512,
+          dropRadius: 20,
+          perturbance: 0.04,
+        });
+
+ 
+        $(document).on('input change', '.range', function() {
+          var $el = $('#animatedGradient');
+          var x = Math.random() * $el.outerWidth();
+          var y = Math.random() * $el.outerHeight();
+          var dropRadius = 30;
+          var strength = 0.08 + Math.random() * 0.08;
+
+          $el.ripples('drop', x, y, dropRadius, strength);
+        });
+        // Automatic drops
+        /*setInterval(function() {
+          var $el = $('#animatedGradient');
+          var x = Math.random() * $el.outerWidth();
+          var y = Math.random() * $el.outerHeight();
+          var dropRadius = 30;
+          var strength = 0.4 + Math.random() * 0.4;
+
+          $el.ripples('drop', x, y, dropRadius, strength);
+
+        }, 100); */
+
+   
+ 
+
+      });
+
+       
+     
+       
+       
+      
+    </script>
+  </body>
+</html>
